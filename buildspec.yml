@@ -1,23 +1,9 @@
 version: 0.2
 
 phases:
-  install:
-    commands:
-      - echo Executing Install Phase
-    finally:
-      - echo Executing Finally Install Phase
   pre_build:
     commands:
-      - echo Executing Pre Build Phanse
-    finally:
-      - echo Executing Pre Build Phase
+      - npm install
   build:
     commands:
-      - echo Executing Build Phanse
-    finally:
-      - echo Executing Finally Build Phase
-  post_build:
-    commands:
-      - echo Executing Post Build Phanse
-    finally:
-      - echo Executing Finally Post Build Phase
+      - npm run build:ci
